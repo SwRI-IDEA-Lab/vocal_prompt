@@ -1,0 +1,21 @@
+name: Upload Vocal Prompts as Assets
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  upload-assets:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Upload .md files from VOCAL_prompts
+        uses: softprops/action-gh-release@v2
+        with:
+          files: VOCAL_prompts/*.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
