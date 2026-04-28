@@ -63,4 +63,8 @@ If you are using these prompts outside a formal curriculum (e.g., self-directed 
 
 ## Contributing
 
-We welcome discussion, suggested modifications, and new prompts with specific pedagogical objectives. These prompts are actively tested and revised as part of the [ButterflAI program](https://coffies.ucar.edu/butterflai) — an 11-week undergraduate research experience in solar physics built around the VOCAL Framework. Open an issue or pull request to contribute.
+We welcome discussion, suggested modifications, and new prompts with specific pedagogical objectives. These prompts are actively tested and revised as part of the ButterflAI program — an 11-week undergraduate research experience in solar physics built around the VOCAL Framework. Open an issue or pull request to contribute.
+
+## Acknowledgements
+
+The ButterflAI program is part of [NASA's Consequences Of Fields and Flows in the Interior and Exterior of the Sun](https://coffies.stanford.edu/) (COFFIES) Science center.  This work was supported by the COFFIES DSC Cooperative Agreement 80NSSC22M0162.
