@@ -1,0 +1,29 @@
+name: Upload Vocal Prompts as Assets
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  upload-assets:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check files (Debug)
+        run: |
+          echo "Listing root directory:"
+          ls -F
+          echo "Listing VOCAL_prompts directory:"
+          ls -F VOCAL_prompts/ || echo "Folder not found!"
+
+      - name: Upload .md files
+        uses: softprops/action-gh-release@v2
+        with:
+          files: VOCAL_prompts/*.md
+          fail_on_unmatched_files: true  # This will make the action FAIL if no files are found
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
